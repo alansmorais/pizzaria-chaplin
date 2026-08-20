@@ -9,7 +9,7 @@
   <meta name="title" content="Pizzaria Chaplin Neto | Cardápio Digital & Delivery Rápido" />
   <meta name="description" content="Pizzas artesanais no forno de pedra na Praça do Trabalhador. Delivery 15 a 25 min, taxa fixa R$ 5,00, pizzas meio a meio, bordas recheadas e clube fidelidade." />
   <meta name="keywords" content="Pizzaria Chaplin Neto, Pizza Caruaru, Delivery Pizza, Praça do Trabalhador, Forno a Lenha, Pizza Calabresa, Pizza Camarão" />
-  <meta name="theme-color" content="#0b2545" />
+  <meta name="theme-color" content="#092E5B" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="restaurant" />
@@ -25,18 +25,18 @@
         extend: {
           colors: {
             chaplin: {
-              navy: '#0b2545',
-              navyDark: '#07192f',
-              navyLight: '#133a6b',
-              orange: '#ea580c',
-              orangeHover: '#c2410c',
-              cream: '#fef3c7',
-              gold: '#f59e0b'
+              navy: '#092E5B',
+              navyDark: '#061F3D',
+              navyLight: '#123E73',
+              orange: '#F47721',
+              orangeHover: '#D65E13',
+              cream: '#F3F3EC',
+              gold: '#D9A441'
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif']
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Oswald', 'sans-serif']
           }
         }
       }
@@ -44,7 +44,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <!-- Canvas Confetti & Lucide Icons -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -74,11 +74,269 @@
     }
   }
   </script>
+
+<style>
+  :root {
+    --chaplin-navy: #092E5B;
+    --chaplin-orange: #F47721;
+    --chaplin-cream: #F3F3EC;
+    --chaplin-paper: #FAFAF5;
+    --chaplin-gray: #D9DAD5;
+    --chaplin-ink: #18212B;
+  }
+
+  html { background: var(--chaplin-cream); }
+
+  body {
+    background: var(--chaplin-cream) !important;
+    color: var(--chaplin-ink) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .035;
+    background-image: url('https://raw.githubusercontent.com/alansmorais/pizzaria-chaplin/refs/heads/main/images/logo.jpg');
+    background-repeat: repeat;
+    background-size: 330px 330px;
+    background-position: center;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .font-serif {
+    font-family: 'Oswald', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+  }
+
+  /* Vintage top strip */
+  body > div:first-child {
+    background: var(--chaplin-navy) !important;
+    color: #fff !important;
+    border-bottom: 3px solid var(--chaplin-orange);
+    box-shadow: none !important;
+    letter-spacing: .025em;
+  }
+
+  /* Main navigation */
+  header {
+    background: var(--chaplin-cream) !important;
+    color: var(--chaplin-navy) !important;
+    border-bottom: 2px solid var(--chaplin-navy) !important;
+    box-shadow: 0 3px 0 rgba(9,46,91,.08) !important;
+  }
+
+  header .text-white { color: var(--chaplin-navy) !important; }
+  header .text-blue-200,
+  header .text-blue-100 { color: var(--chaplin-navy) !important; }
+  header .bg-black\/20 {
+    background: transparent !important;
+    border-color: var(--chaplin-navy) !important;
+    border-width: 1px;
+  }
+
+  header nav button {
+    border-radius: 4px !important;
+    text-transform: uppercase;
+    letter-spacing: .045em;
+    transition: all .2s ease;
+  }
+
+  header nav button:hover { background: rgba(9,46,91,.08) !important; }
+  header nav button.bg-\[\#F47721\] {
+    background: var(--chaplin-orange) !important;
+    color: #fff !important;
+  }
+
+  /* Keep the cart/tracker functional, but make them look like signage. */
+  header .rounded-xl { border-radius: 4px !important; }
+  header .bg-\[\#10335e\] { background: var(--chaplin-navy) !important; }
+  header .bg-\[\#F47721\] { background: var(--chaplin-orange) !important; }
+
+  /* Hero: vintage poster rather than SaaS dashboard */
+  body > section {
+    background: var(--chaplin-cream) !important;
+    color: var(--chaplin-navy) !important;
+    border-bottom: 4px double var(--chaplin-navy) !important;
+  }
+
+  body > section .text-white { color: var(--chaplin-navy) !important; }
+  body > section .text-stone-300,
+  body > section .text-stone-200 { color: #4d5964 !important; }
+  body > section .border-white\/10 { border-color: rgba(9,46,91,.22) !important; }
+  body > section .bg-white\/5 { background: rgba(255,255,255,.45) !important; }
+  body > section .bg-white\/10 { background: rgba(255,255,255,.7) !important; }
+
+  body > section h2 {
+    color: var(--chaplin-navy) !important;
+    font-size: clamp(2.25rem, 5vw, 4.6rem) !important;
+    line-height: .98 !important;
+    letter-spacing: .015em;
+  }
+
+  body > section .inline-flex {
+    border-radius: 2px !important;
+    background: transparent !important;
+    border: 1px solid var(--chaplin-orange) !important;
+    color: var(--chaplin-orange) !important;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  body > section .rounded-3xl {
+    border-radius: 50% !important;
+    border: 5px solid var(--chaplin-navy) !important;
+    outline: 3px solid var(--chaplin-orange);
+    outline-offset: 6px;
+    box-shadow: 0 12px 30px rgba(9,46,91,.18) !important;
+  }
+
+  body > section .rounded-3xl img { border-radius: 50%; }
+  body > section .bg-gradient-to-t { background: linear-gradient(to top, rgba(9,46,91,.78), transparent) !important; }
+
+  body > section .rounded-2xl,
+  body > section button { border-radius: 4px !important; }
+
+  /* Main menu */
+  main { position: relative; }
+
+  #view-cardapio > div:first-child {
+    background: rgba(250,250,245,.92) !important;
+    border: 2px solid var(--chaplin-navy) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    position: relative;
+  }
+
+  #view-cardapio > div:first-child::before,
+  #view-cardapio > div:first-child::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    height: 1px;
+    background: var(--chaplin-orange);
+  }
+  #view-cardapio > div:first-child::before { top: 5px; }
+  #view-cardapio > div:first-child::after { bottom: 5px; }
+
+  .category-btn {
+    border-radius: 3px !important;
+    border: 1px solid var(--chaplin-navy) !important;
+    text-transform: uppercase;
+    letter-spacing: .035em;
+    background: var(--chaplin-paper) !important;
+    color: var(--chaplin-navy) !important;
+    box-shadow: none !important;
+  }
+  .category-btn.bg-\[\#092E5B\] {
+    background: var(--chaplin-navy) !important;
+    color: #fff !important;
+    border-color: var(--chaplin-navy) !important;
+  }
+
+  #menu-search {
+    border-radius: 3px !important;
+    background: var(--chaplin-paper) !important;
+    border: 1px solid var(--chaplin-navy) !important;
+  }
+
+  /* Product cards: printed-menu feeling */
+  #products-grid > div {
+    background: var(--chaplin-paper) !important;
+    border: 1px solid var(--chaplin-navy) !important;
+    border-radius: 4px !important;
+    box-shadow: 4px 4px 0 rgba(9,46,91,.08) !important;
+  }
+
+  #products-grid > div:hover {
+    box-shadow: 6px 6px 0 rgba(9,46,91,.12) !important;
+    transform: translateY(-2px);
+  }
+
+  #products-grid img { filter: saturate(.94) sepia(.035); }
+  #products-grid h4 { letter-spacing: .04em; }
+  #products-grid .rounded-full { border-radius: 2px !important; }
+  #products-grid button { border-radius: 3px !important; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* Secondary panels */
+  #view-promocoes > div,
+  #view-garcom > div,
+  #view-motoboy > div {
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    border: 2px solid var(--chaplin-navy) !important;
+  }
+
+  #view-promocoes > div {
+    background: var(--chaplin-navy) !important;
+  }
+
+  #view-promocoes .rounded-2xl,
+  #view-garcom .rounded-2xl,
+  #view-motoboy .rounded-2xl { border-radius: 3px !important; }
+
+  /* All primary controls */
+  button.bg-\[\#F47721\],
+  button.bg-\[\#092E5B\] { border-radius: 3px !important; }
+
+  /* Modals */
+  #modal-customizer > div,
+  #modal-checkout > div,
+  #modal-tracker > div,
+  #cart-drawer > div {
+    border-radius: 4px !important;
+    border: 2px solid var(--chaplin-navy) !important;
+  }
+
+  #modal-customizer .bg-\[\#092E5B\],
+  #modal-checkout .bg-\[\#092E5B\],
+  #modal-tracker .bg-\[\#092E5B\],
+  #cart-drawer .bg-\[\#092E5B\] {
+    background: var(--chaplin-navy) !important;
+  }
+
+  #modal-customizer .rounded-2xl,
+  #modal-checkout .rounded-2xl,
+  #modal-tracker .rounded-2xl,
+  #cart-drawer .rounded-2xl { border-radius: 3px !important; }
+
+  /* Footer: vintage signboard */
+  footer {
+    background: var(--chaplin-navy) !important;
+    border-top: 5px double var(--chaplin-orange) !important;
+  }
+  footer h4 { letter-spacing: .08em; }
+  footer a { border-radius: 3px !important; }
+
+  /* Replace excessive modern pill geometry globally without affecting functionality. */
+  .rounded-3xl { border-radius: 6px !important; }
+  .rounded-2xl { border-radius: 5px !important; }
+  .rounded-xl { border-radius: 4px !important; }
+
+  /* Keep genuinely circular elements circular. */
+  .rounded-full { border-radius: 9999px !important; }
+
+  @media (max-width: 767px) {
+    header .flex.items-center.justify-between { align-items: center; }
+    body > section h2 { font-size: 2.6rem !important; }
+    body > section .rounded-3xl {
+      margin-top: 12px;
+      outline-offset: 4px;
+    }
+  }
+</style>
+
 </head>
-<body class="bg-stone-100 text-stone-900 min-h-screen antialiased selection:bg-[#ea580c] selection:text-white">
+<body class="bg-stone-100 text-stone-900 min-h-screen antialiased selection:bg-[#F47721] selection:text-white">
 
   <!-- TOP BAR -->
-  <div class="bg-[#ea580c] text-white text-xs py-2 px-4 shadow-sm">
+  <div class="bg-[#F47721] text-white text-xs py-2 px-4 shadow-sm">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 font-medium">
       <div class="flex items-center gap-2">
         <span class="bg-black/20 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide">🔥 Destaque</span>
@@ -97,23 +355,18 @@
   </div>
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 bg-[#0b2545] text-white shadow-xl border-b border-blue-950/60">
+  <header class="sticky top-0 z-40 bg-[#092E5B] text-white shadow-xl border-b border-blue-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
       
       <!-- LOGO -->
       <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('cardapio')">
-        <img src="images/logo.jpg" alt="Logo Chaplin Neto" class="w-12 h-12 rounded-2xl shadow-lg border-2 border-white/20 object-cover bg-white" />
-        <div>
-          <h1 class="text-xl sm:text-2xl font-black font-serif tracking-tight leading-none text-white">
-            CHAPLIN <span class="text-[#ea580c]">NETO</span>
-          </h1>
-          <p class="text-[11px] font-semibold text-blue-200 tracking-wider uppercase">Pizzaria & Forno a Lenha</p>
-        </div>
+        <img src="https://raw.githubusercontent.com/alansmorais/pizzaria-chaplin/refs/heads/main/images/logo.jpg" alt="Pizzaria Chaplin" class="w-14 h-14 sm:w-[68px] sm:h-[68px] rounded-full object-contain bg-[#FAFAF5]" />
+
       </div>
 
       <!-- TABS -->
       <nav class="hidden md:flex items-center gap-1.5 bg-black/20 p-1.5 rounded-2xl border border-white/10 text-xs font-bold">
-        <button onclick="switchTab('cardapio')" id="tab-btn-cardapio" class="px-4 py-2 rounded-xl bg-[#ea580c] text-white shadow-sm transition-all flex items-center gap-1.5">
+        <button onclick="switchTab('cardapio')" id="tab-btn-cardapio" class="px-4 py-2 rounded-xl bg-[#F47721] text-white shadow-sm transition-all flex items-center gap-1.5">
           <span>🍕</span> Cardápio Digital
         </button>
         <button onclick="switchTab('promocoes')" id="tab-btn-promocoes" class="px-4 py-2 rounded-xl text-blue-100 hover:bg-white/10 transition-all flex items-center gap-1.5">
@@ -133,14 +386,14 @@
       <!-- ACTIONS -->
       <div class="flex items-center gap-2">
         <button onclick="openTrackerModal()" class="px-3.5 py-2 rounded-xl bg-[#10335e] hover:bg-[#16437c] text-xs font-bold text-blue-100 flex items-center gap-1.5 border border-blue-900 transition-colors">
-          <i data-lucide="search" class="w-4 h-4 text-[#ea580c]"></i>
+          <i data-lucide="search" class="w-4 h-4 text-[#F47721]"></i>
           <span class="hidden sm:inline">Rastrear</span>
         </button>
         
-        <button onclick="openCart()" class="relative px-4 py-2 rounded-xl bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs font-black flex items-center gap-2 shadow-lg transition-all active:scale-95">
+        <button onclick="openCart()" class="relative px-4 py-2 rounded-xl bg-[#F47721] hover:bg-[#D65E13] text-white text-xs font-black flex items-center gap-2 shadow-lg transition-all active:scale-95">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           <span class="hidden sm:inline">Meu Carrinho</span>
-          <span id="cart-badge" class="w-5 h-5 rounded-full bg-white text-[#0b2545] font-black text-[11px] flex items-center justify-center">0</span>
+          <span id="cart-badge" class="w-5 h-5 rounded-full bg-white text-[#092E5B] font-black text-[11px] flex items-center justify-center">0</span>
         </button>
       </div>
 
@@ -148,7 +401,7 @@
 
     <!-- MOBILE TABS -->
     <div class="flex md:hidden overflow-x-auto px-3 py-2 gap-1.5 border-t border-white/10 bg-black/10 text-xs font-bold scrollbar-none">
-      <button onclick="switchTab('cardapio')" id="m-tab-btn-cardapio" class="px-3 py-1.5 rounded-lg bg-[#ea580c] text-white shrink-0">🍕 Cardápio</button>
+      <button onclick="switchTab('cardapio')" id="m-tab-btn-cardapio" class="px-3 py-1.5 rounded-lg bg-[#F47721] text-white shrink-0">🍕 Cardápio</button>
       <button onclick="switchTab('promocoes')" id="m-tab-btn-promocoes" class="px-3 py-1.5 rounded-lg text-blue-100 shrink-0">🎁 Clube</button>
       <button onclick="switchTab('garcom')" id="m-tab-btn-garcom" class="px-3 py-1.5 rounded-lg text-blue-100 shrink-0">🛎️ Mesa</button>
       <button onclick="switchTab('cozinha')" id="m-tab-btn-cozinha" class="px-3 py-1.5 rounded-lg text-blue-100 shrink-0">👨‍🍳 Cozinha</button>
@@ -157,16 +410,16 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative bg-[#0b2545] text-white overflow-hidden py-10 sm:py-14 border-b border-blue-900/40">
-    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  <section class="relative bg-[#092E5B] text-white overflow-hidden py-8 sm:py-11 border-b border-blue-900/40">
+    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#F47721_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
         
         <div class="lg:col-span-7 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ea580c]/20 border border-[#ea580c]/40 text-[#ea580c] text-xs font-bold">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F47721]/20 border border-[#F47721]/40 text-[#F47721] text-xs font-bold">
             <span>🍕</span> O Verdadeiro Forno a Lenha de Pedra de Caruaru
           </div>
-          <h2 class="text-3xl sm:text-5xl font-black font-serif leading-tight">
+          <h2 class="text-2xl sm:text-4xl lg:text-[2.7rem] font-bold font-serif leading-tight max-w-2xl">
             Pizzas Artesanais com Massa Crocante e Recheio Generoso
           </h2>
           <p class="text-stone-300 text-sm sm:text-base max-w-xl">
@@ -174,27 +427,27 @@
           </p>
 
           <div class="flex flex-wrap gap-3 pt-2">
-            <button onclick="scrollToMenu()" class="px-6 py-3 rounded-2xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-extrabold text-sm shadow-xl transition-all flex items-center gap-2 active:scale-95">
+            <button onclick="scrollToMenu()" class="px-6 py-3 rounded-2xl bg-[#F47721] hover:bg-[#D65E13] text-white font-extrabold text-sm shadow-xl transition-all flex items-center gap-2 active:scale-95">
               <span>Ver Cardápio & Pedir</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
             <button onclick="openTrackerModal()" class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-xs transition-colors flex items-center gap-2">
-              <i data-lucide="search" class="w-4 h-4 text-[#ea580c]"></i>
+              <i data-lucide="search" class="w-4 h-4 text-[#F47721]"></i>
               <span>Rastrear Meu Pedido</span>
             </button>
           </div>
 
           <div class="grid grid-cols-3 gap-3 pt-4 border-t border-white/10 text-center">
             <div class="p-2 rounded-xl bg-white/5 border border-white/10">
-              <div class="text-xl font-black text-[#ea580c]">15-25m</div>
+              <div class="text-xl font-black text-[#F47721]">15-25m</div>
               <div class="text-[10px] text-stone-300 uppercase font-semibold">Entrega Express</div>
             </div>
             <div class="p-2 rounded-xl bg-white/5 border border-white/10">
-              <div class="text-xl font-black text-[#ea580c]">R$ 5,00</div>
+              <div class="text-xl font-black text-[#F47721]">R$ 5,00</div>
               <div class="text-[10px] text-stone-300 uppercase font-semibold">Taxa de Entrega</div>
             </div>
             <div class="p-2 rounded-xl bg-white/5 border border-white/10">
-              <div class="text-xl font-black text-[#ea580c]">5 Selos</div>
+              <div class="text-xl font-black text-[#F47721]">5 Selos</div>
               <div class="text-[10px] text-stone-300 uppercase font-semibold">1 Pizza Grátis</div>
             </div>
           </div>
@@ -202,16 +455,74 @@
 
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-4/3 sm:aspect-square">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Pizza Chaplin Forno a Lenha" class="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=88" alt="Pizza Chaplin Forno a Lenha" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <div class="absolute bottom-4 left-4 right-4 text-white">
-              <span class="px-2.5 py-1 rounded-lg bg-[#ea580c] font-black text-[11px] uppercase">A Mais Pedida</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#F47721] font-black text-[11px] uppercase">A Mais Pedida</span>
               <h3 class="text-lg font-black font-serif mt-1">Pizza Chaplin da Casa</h3>
               <p class="text-xs text-stone-200">Mussarela, calabresa, presunto, bacon, ovos, milho e orégano</p>
             </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY — ALL AVAILABLE PRODUCT IMAGES -->
+  <section id="chaplin-gallery" class="bg-[#F3F3EC] border-b border-[#092E5B]/10 py-8 sm:py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-4 mb-5">
+        <div>
+          <p class="text-[10px] font-black uppercase tracking-[0.22em] text-[#F47721]">Pizzaria Chaplin</p>
+          <h2 class="text-xl sm:text-2xl font-black text-[#092E5B]">Nossos sabores</h2>
+        </div>
+        <button onclick="scrollToMenu()" class="hidden sm:inline-flex items-center gap-2 text-xs font-black uppercase tracking-wide text-[#092E5B] hover:text-[#F47721] transition-colors">
+          Ver cardápio <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85" alt="Pizza Chaplin da Casa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Pizza Chaplin</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85" alt="Pizza Nordestina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Nordestina</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=900&q=85" alt="Pizza de Camarão Especial" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Camarão Especial</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=900&q=85" alt="Pizza de Calabresa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Calabresa</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85" alt="Pizza Frango com Catupiry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Frango & Catupiry</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=900&q=85" alt="Pizza Quatro Queijos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Quatro Queijos</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=900&q=85" alt="Pizza Chocolate com Morango" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Chocolate & Morango</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=85" alt="Coca-Cola 2 Litros" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Coca-Cola 2L</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85" alt="Guaraná Antarctica 2 Litros" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Guaraná 2L</figcaption>
+        </figure>
+        <figure class="group relative aspect-square overflow-hidden border border-[#092E5B]/15 bg-white shadow-sm">
+          <img src="https://raw.githubusercontent.com/alansmorais/pizzaria-chaplin/refs/heads/main/images/logo.jpg" alt="Logo Pizzaria Chaplin" class="w-full h-full object-contain bg-[#FAFAF5] p-3 transition-transform duration-500 group-hover:scale-105" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 pt-8 pb-3 text-white text-[11px] font-black">Pizzaria Chaplin</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -225,7 +536,7 @@
       <!-- Filters & Search -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-3xl shadow-sm border border-stone-200">
         <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
-          <button onclick="filterCategory('todos')" id="cat-todos" class="category-btn px-4 py-2 rounded-2xl bg-[#0b2545] text-white text-xs font-black shadow-xs shrink-0 transition-all">
+          <button onclick="filterCategory('todos')" id="cat-todos" class="category-btn px-4 py-2 rounded-2xl bg-[#092E5B] text-white text-xs font-black shadow-xs shrink-0 transition-all">
             🔥 Todos
           </button>
           <button onclick="filterCategory('especiais')" id="cat-especiais" class="category-btn px-4 py-2 rounded-2xl bg-stone-100 text-stone-700 hover:bg-stone-200 text-xs font-bold shrink-0 transition-all">
@@ -244,7 +555,7 @@
 
         <div class="relative w-full sm:w-64">
           <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-stone-400"></i>
-          <input type="text" id="menu-search" oninput="handleSearch(this.value)" placeholder="Buscar sabor de pizza..." class="w-full pl-10 pr-4 py-2 text-xs rounded-2xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-hidden focus:border-[#ea580c]" />
+          <input type="text" id="menu-search" oninput="handleSearch(this.value)" placeholder="Buscar sabor de pizza..." class="w-full pl-10 pr-4 py-2 text-xs rounded-2xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-hidden focus:border-[#F47721]" />
         </div>
       </div>
 
@@ -256,9 +567,9 @@
 
     <!-- VIEW 2: CLUBE CHAPLIN & PROMOÇÕES -->
     <section id="view-promocoes" class="hidden space-y-6">
-      <div class="bg-gradient-to-br from-[#0b2545] to-[#133a6b] text-white p-6 sm:p-8 rounded-3xl shadow-xl space-y-6">
+      <div class="bg-gradient-to-br from-[#092E5B] to-[#123E73] text-white p-6 sm:p-8 rounded-3xl shadow-xl space-y-6">
         <div class="max-w-2xl space-y-2">
-          <span class="px-3 py-1 rounded-full bg-[#ea580c] font-black text-xs uppercase tracking-wider">Clube de Vantagens</span>
+          <span class="px-3 py-1 rounded-full bg-[#F47721] font-black text-xs uppercase tracking-wider">Clube de Vantagens</span>
           <h2 class="text-2xl sm:text-4xl font-black font-serif">Fidelidade Chaplin: Junte 5 Selos e Ganhe 1 Pizza Grande!</h2>
           <p class="text-stone-300 text-xs sm:text-sm">A cada pedido no seu número de WhatsApp, você ganha 1 selo automático. Ao completar 5 selos, sua próxima Pizza Grande é grátis!</p>
         </div>
@@ -267,7 +578,7 @@
           <label class="block text-xs font-bold text-white uppercase tracking-wider">Consultar Meus Selos pelo WhatsApp:</label>
           <div class="flex gap-2">
             <input type="tel" id="loyalty-phone-input" placeholder="(81) 99999-9999" class="flex-1 px-4 py-2.5 rounded-xl bg-white text-stone-900 font-bold text-sm focus:outline-hidden" />
-            <button onclick="checkLoyalty()" class="px-4 py-2.5 rounded-xl bg-[#ea580c] hover:bg-[#c2410c] font-black text-xs text-white transition-colors">
+            <button onclick="checkLoyalty()" class="px-4 py-2.5 rounded-xl bg-[#F47721] hover:bg-[#D65E13] font-black text-xs text-white transition-colors">
               Consultar
             </button>
           </div>
@@ -279,9 +590,9 @@
     <!-- VIEW 3: GARÇOM DIGITAL (MESA) -->
     <section id="view-garcom" class="hidden space-y-6">
       <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-200 space-y-6 max-w-2xl mx-auto text-center">
-        <div class="w-16 h-16 rounded-3xl bg-[#0b2545] text-white flex items-center justify-center mx-auto text-2xl font-black shadow-lg">🛎️</div>
+        <div class="w-16 h-16 rounded-3xl bg-[#092E5B] text-white flex items-center justify-center mx-auto text-2xl font-black shadow-lg">🛎️</div>
         <div class="space-y-1">
-          <h2 class="text-2xl font-black font-serif text-[#0b2545]">Garçom Digital • Atendimento na Mesa</h2>
+          <h2 class="text-2xl font-black font-serif text-[#092E5B]">Garçom Digital • Atendimento na Mesa</h2>
           <p class="text-xs text-stone-600">Está consumindo no salão da Pizzaria Chaplin Neto na Praça do Trabalhador? Chame nosso atendente ou peça sua conta com 1 toque.</p>
         </div>
 
@@ -298,10 +609,10 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto">
-          <button onclick="callWaiter('atendimento')" class="p-4 rounded-2xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm shadow-md transition-all">
+          <button onclick="callWaiter('atendimento')" class="p-4 rounded-2xl bg-[#F47721] hover:bg-[#D65E13] text-white font-black text-sm shadow-md transition-all">
             🙋 Chamar Atendente
           </button>
-          <button onclick="callWaiter('conta')" class="p-4 rounded-2xl bg-[#0b2545] hover:bg-[#07192f] text-white font-black text-sm shadow-md transition-all">
+          <button onclick="callWaiter('conta')" class="p-4 rounded-2xl bg-[#092E5B] hover:bg-[#061F3D] text-white font-black text-sm shadow-md transition-all">
             💳 Pedir a Conta
           </button>
         </div>
@@ -312,7 +623,7 @@
     <section id="view-cozinha" class="hidden space-y-4">
       <div class="flex items-center justify-between">
         <div>
-          <h2 class="text-xl font-black font-serif text-[#0b2545]">Painel de Cozinha KDS (Forno a Lenha)</h2>
+          <h2 class="text-xl font-black font-serif text-[#092E5B]">Painel de Cozinha KDS (Forno a Lenha)</h2>
           <p class="text-xs text-stone-500">Gerenciamento de produção e status de pedidos em tempo real</p>
         </div>
         <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">🟢 Forno a Lenha Ativo</span>
@@ -324,7 +635,7 @@
     <!-- VIEW 5: MOTOBOYS -->
     <section id="view-motoboy" class="hidden space-y-4">
       <div class="bg-white p-6 rounded-3xl shadow-sm border border-stone-200 space-y-4">
-        <h2 class="text-xl font-black font-serif text-[#0b2545]">Logística & Despacho Motoboy Chaplin Express</h2>
+        <h2 class="text-xl font-black font-serif text-[#092E5B]">Logística & Despacho Motoboy Chaplin Express</h2>
         <p class="text-xs text-stone-500">Entregas em rota com taxa fixa de R$ 5,00 por corrida</p>
         <div id="motoboy-orders-container" class="space-y-3"></div>
       </div>
@@ -333,10 +644,10 @@
   </main>
 
   <!-- MODAL: PERSONALIZAÇÃO DE PIZZA -->
-  <div id="modal-customizer" class="fixed inset-0 z-50 bg-[#0b2545]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+  <div id="modal-customizer" class="fixed inset-0 z-50 bg-[#092E5B]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
     <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-stone-200">
       
-      <div class="p-4 sm:p-5 bg-[#0b2545] text-white flex items-center justify-between shrink-0">
+      <div class="p-4 sm:p-5 bg-[#092E5B] text-white flex items-center justify-between shrink-0">
         <div>
           <h3 id="cust-modal-title" class="font-black text-lg font-serif">Personalizar Pizza</h3>
           <p class="text-xs text-stone-300">Escolha o tamanho, sabores e borda recheada</p>
@@ -347,37 +658,37 @@
       <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1 text-xs sm:text-sm">
         <!-- Tamanho -->
         <div class="space-y-2">
-          <label class="block font-black text-xs text-[#0b2545] uppercase tracking-wider">1. Escolha o Tamanho:</label>
+          <label class="block font-black text-xs text-[#092E5B] uppercase tracking-wider">1. Escolha o Tamanho:</label>
           <div class="grid grid-cols-3 gap-2" id="cust-size-options">
-            <button onclick="selectSize('M')" id="size-btn-M" class="size-select-btn p-3 rounded-2xl border-2 border-[#0b2545] bg-blue-50 text-center">
-              <div class="font-black text-xs text-[#0b2545]">Média (M)</div>
+            <button onclick="selectSize('M')" id="size-btn-M" class="size-select-btn p-3 rounded-2xl border-2 border-[#092E5B] bg-blue-50 text-center">
+              <div class="font-black text-xs text-[#092E5B]">Média (M)</div>
               <div class="text-[10px] text-stone-500">6 Fatias • 30cm</div>
-              <div id="size-price-M" class="font-bold text-xs text-[#ea580c] mt-1">R$ 20,00</div>
+              <div id="size-price-M" class="font-bold text-xs text-[#F47721] mt-1">R$ 20,00</div>
             </button>
             <button onclick="selectSize('G')" id="size-btn-G" class="size-select-btn p-3 rounded-2xl border-2 border-stone-200 bg-white text-center">
-              <div class="font-black text-xs text-[#0b2545]">Grande (G)</div>
+              <div class="font-black text-xs text-[#092E5B]">Grande (G)</div>
               <div class="text-[10px] text-stone-500">8 Fatias • 35cm</div>
-              <div id="size-price-G" class="font-bold text-xs text-[#ea580c] mt-1">R$ 28,00</div>
+              <div id="size-price-G" class="font-bold text-xs text-[#F47721] mt-1">R$ 28,00</div>
             </button>
             <button onclick="selectSize('Familia')" id="size-btn-Familia" class="size-select-btn p-3 rounded-2xl border-2 border-stone-200 bg-white text-center">
-              <div class="font-black text-xs text-[#0b2545]">Família (F)</div>
+              <div class="font-black text-xs text-[#092E5B]">Família (F)</div>
               <div class="text-[10px] text-stone-500">12 Fatias • 40cm</div>
-              <div id="size-price-Familia" class="font-bold text-xs text-[#ea580c] mt-1">R$ 38,00</div>
+              <div id="size-price-Familia" class="font-bold text-xs text-[#F47721] mt-1">R$ 38,00</div>
             </button>
           </div>
         </div>
 
         <!-- Meio a Meio -->
-        <div class="p-3.5 rounded-2xl bg-orange-50/70 border border-[#ea580c]/30 space-y-2">
+        <div class="p-3.5 rounded-2xl bg-orange-50/70 border border-[#F47721]/30 space-y-2">
           <div class="flex items-center justify-between">
             <div>
-              <span class="font-bold text-xs text-[#0b2545]">Dividir Pizza em 2 Sabores (1/2 a 1/2)?</span>
+              <span class="font-bold text-xs text-[#092E5B]">Dividir Pizza em 2 Sabores (1/2 a 1/2)?</span>
               <p class="text-[10px] text-stone-500">O valor final considera o sabor de maior valor</p>
             </div>
-            <input type="checkbox" id="cust-half-toggle" onchange="toggleHalfHalf(this.checked)" class="w-5 h-5 accent-[#ea580c] rounded cursor-pointer" />
+            <input type="checkbox" id="cust-half-toggle" onchange="toggleHalfHalf(this.checked)" class="w-5 h-5 accent-[#F47721] rounded cursor-pointer" />
           </div>
 
-          <div id="cust-second-half-box" class="hidden pt-2 border-t border-[#ea580c]/20">
+          <div id="cust-second-half-box" class="hidden pt-2 border-t border-[#F47721]/20">
             <label class="block text-[11px] font-bold text-stone-700 mb-1">Escolha o 2º Sabor:</label>
             <select id="cust-second-half-select" onchange="updateCustomizerTotal()" class="w-full p-2.5 rounded-xl border border-stone-300 text-xs font-bold bg-white focus:outline-hidden"></select>
           </div>
@@ -385,41 +696,41 @@
 
         <!-- Bordas Recheadas -->
         <div class="space-y-2">
-          <label class="block font-black text-xs text-[#0b2545] uppercase tracking-wider">2. Borda Recheada Artesanal:</label>
+          <label class="block font-black text-xs text-[#092E5B] uppercase tracking-wider">2. Borda Recheada Artesanal:</label>
           <div class="grid grid-cols-2 gap-2" id="cust-crust-options">
-            <button onclick="selectCrust('none', 0)" id="crust-btn-none" class="crust-btn p-2.5 rounded-xl border-2 border-[#0b2545] bg-blue-50 text-left">
+            <button onclick="selectCrust('none', 0)" id="crust-btn-none" class="crust-btn p-2.5 rounded-xl border-2 border-[#092E5B] bg-blue-50 text-left">
               <div class="font-bold text-xs">Massa Tradicional</div>
               <div class="text-[10px] text-stone-500">Sem borda (+R$ 0,00)</div>
             </button>
             <button onclick="selectCrust('catupiry', 6)" id="crust-btn-catupiry" class="crust-btn p-2.5 rounded-xl border-2 border-stone-200 bg-white text-left">
               <div class="font-bold text-xs">Catupiry Original</div>
-              <div class="text-[10px] text-[#ea580c] font-bold">+R$ 6,00</div>
+              <div class="text-[10px] text-[#F47721] font-bold">+R$ 6,00</div>
             </button>
             <button onclick="selectCrust('cheddar', 6)" id="crust-btn-cheddar" class="crust-btn p-2.5 rounded-xl border-2 border-stone-200 bg-white text-left">
               <div class="font-bold text-xs">Cheddar Cremoso</div>
-              <div class="text-[10px] text-[#ea580c] font-bold">+R$ 6,00</div>
+              <div class="text-[10px] text-[#F47721] font-bold">+R$ 6,00</div>
             </button>
             <button onclick="selectCrust('chocolate', 8)" id="crust-btn-chocolate" class="crust-btn p-2.5 rounded-xl border-2 border-stone-200 bg-white text-left">
               <div class="font-bold text-xs">Chocolate Nobre</div>
-              <div class="text-[10px] text-[#ea580c] font-bold">+R$ 8,00</div>
+              <div class="text-[10px] text-[#F47721] font-bold">+R$ 8,00</div>
             </button>
           </div>
         </div>
 
         <!-- Observações -->
         <div class="space-y-1">
-          <label class="block font-black text-xs text-[#0b2545] uppercase tracking-wider">Observações do Preparo:</label>
-          <input type="text" id="cust-notes" placeholder="Ex: Sem cebola, bem assadinha, cortar em 8 fatias..." class="w-full p-2.5 rounded-xl border border-stone-300 text-xs focus:outline-hidden focus:border-[#ea580c]" />
+          <label class="block font-black text-xs text-[#092E5B] uppercase tracking-wider">Observações do Preparo:</label>
+          <input type="text" id="cust-notes" placeholder="Ex: Sem cebola, bem assadinha, cortar em 8 fatias..." class="w-full p-2.5 rounded-xl border border-stone-300 text-xs focus:outline-hidden focus:border-[#F47721]" />
         </div>
       </div>
 
       <div class="p-4 bg-stone-50 border-t border-stone-200 flex items-center justify-between shrink-0">
         <div>
           <span class="text-[10px] text-stone-500 uppercase font-semibold">Total Deste Item:</span>
-          <div id="cust-total-price" class="text-xl font-black text-[#ea580c]">R$ 28,00</div>
+          <div id="cust-total-price" class="text-xl font-black text-[#F47721]">R$ 28,00</div>
         </div>
 
-        <button onclick="confirmAddToCart()" class="px-6 py-3 rounded-2xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-xs shadow-lg transition-all flex items-center gap-2 active:scale-95">
+        <button onclick="confirmAddToCart()" class="px-6 py-3 rounded-2xl bg-[#F47721] hover:bg-[#D65E13] text-white font-black text-xs shadow-lg transition-all flex items-center gap-2 active:scale-95">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           <span>Adicionar ao Carrinho</span>
         </button>
@@ -429,11 +740,11 @@
   </div>
 
   <!-- CARRINHO DE COMPRAS -->
-  <div id="cart-drawer" class="fixed inset-0 z-50 bg-[#0b2545]/80 backdrop-blur-xs flex justify-end hidden">
+  <div id="cart-drawer" class="fixed inset-0 z-50 bg-[#092E5B]/80 backdrop-blur-xs flex justify-end hidden">
     <div class="bg-white w-full max-w-md h-full flex flex-col shadow-2xl">
-      <div class="p-4 sm:p-5 bg-[#0b2545] text-white flex items-center justify-between shrink-0">
+      <div class="p-4 sm:p-5 bg-[#092E5B] text-white flex items-center justify-between shrink-0">
         <div class="flex items-center gap-2">
-          <i data-lucide="shopping-bag" class="w-5 h-5 text-[#ea580c]"></i>
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-[#F47721]"></i>
           <h3 class="font-black text-lg font-serif">Seu Pedido Chaplin</h3>
         </div>
         <button onclick="closeCart()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center">✕</button>
@@ -460,13 +771,13 @@
             <span>Taxa de Entrega:</span>
             <span class="font-bold text-stone-900">R$ 5,00 (Grátis Balcão/Mesa)</span>
           </div>
-          <div class="flex justify-between text-base font-black text-[#0b2545] pt-2 border-t border-stone-200">
+          <div class="flex justify-between text-base font-black text-[#092E5B] pt-2 border-t border-stone-200">
             <span>Total Estimado:</span>
-            <span id="cart-total-display" class="text-[#ea580c] font-black text-lg">R$ 0,00</span>
+            <span id="cart-total-display" class="text-[#F47721] font-black text-lg">R$ 0,00</span>
           </div>
         </div>
 
-        <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-2xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+        <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-2xl bg-[#F47721] hover:bg-[#D65E13] text-white font-black text-sm shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95">
           <span>Finalizar Pedido Agora</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
@@ -475,10 +786,10 @@
   </div>
 
   <!-- CHECKOUT MODAL -->
-  <div id="modal-checkout" class="fixed inset-0 z-50 bg-[#0b2545]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+  <div id="modal-checkout" class="fixed inset-0 z-50 bg-[#092E5B]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
     <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[92vh] flex flex-col overflow-hidden border border-stone-200">
       
-      <div class="p-4 sm:p-5 bg-[#0b2545] text-white flex items-center justify-between shrink-0">
+      <div class="p-4 sm:p-5 bg-[#092E5B] text-white flex items-center justify-between shrink-0">
         <div>
           <h3 class="font-black text-lg font-serif">Finalizar Pedido</h3>
           <p class="text-xs text-stone-300">Entrega rápida, retirada ou na mesa</p>
@@ -488,9 +799,9 @@
 
       <div class="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 text-xs sm:text-sm">
         <div class="space-y-1.5">
-          <label class="block font-black text-xs text-[#0b2545] uppercase">1. Como deseja receber seu pedido?</label>
+          <label class="block font-black text-xs text-[#092E5B] uppercase">1. Como deseja receber seu pedido?</label>
           <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="setOrderType('delivery')" id="type-btn-delivery" class="p-2.5 rounded-xl border-2 border-[#ea580c] bg-orange-50 font-bold text-xs text-[#ea580c] text-center">
+            <button type="button" onclick="setOrderType('delivery')" id="type-btn-delivery" class="p-2.5 rounded-xl border-2 border-[#F47721] bg-orange-50 font-bold text-xs text-[#F47721] text-center">
               🛵 Delivery (+R$5)
             </button>
             <button type="button" onclick="setOrderType('balcao')" id="type-btn-balcao" class="p-2.5 rounded-xl border-2 border-stone-200 bg-white font-bold text-xs text-stone-700 text-center">
@@ -505,17 +816,17 @@
         <div class="space-y-3">
           <div>
             <label class="block font-bold text-xs text-stone-700 mb-1">Seu Nome Completo *</label>
-            <input type="text" id="chk-name" required placeholder="Ex: Alan Morais" class="w-full p-2.5 rounded-xl border border-stone-300 font-medium text-xs focus:outline-hidden focus:border-[#ea580c]" />
+            <input type="text" id="chk-name" required placeholder="Ex: Alan Morais" class="w-full p-2.5 rounded-xl border border-stone-300 font-medium text-xs focus:outline-hidden focus:border-[#F47721]" />
           </div>
 
           <div>
             <label class="block font-bold text-xs text-stone-700 mb-1">WhatsApp / Telefone (Obrigatório para rastrear) *</label>
-            <input type="tel" id="chk-phone" required placeholder="(81) 99999-9999" class="w-full p-2.5 rounded-xl border border-stone-300 font-bold text-xs focus:outline-hidden focus:border-[#ea580c]" />
+            <input type="tel" id="chk-phone" required placeholder="(81) 99999-9999" class="w-full p-2.5 rounded-xl border border-stone-300 font-bold text-xs focus:outline-hidden focus:border-[#F47721]" />
           </div>
         </div>
 
         <div id="chk-delivery-fields" class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2">
-          <span class="font-bold text-xs text-[#0b2545]">Endereço de Entrega (Caruaru / Região):</span>
+          <span class="font-bold text-xs text-[#092E5B]">Endereço de Entrega (Caruaru / Região):</span>
           <div class="grid grid-cols-3 gap-2">
             <input type="text" id="chk-street" placeholder="Rua / Avenida *" class="col-span-2 p-2 rounded-lg border border-stone-300 text-xs bg-white" />
             <input type="text" id="chk-number" placeholder="Número *" class="p-2 rounded-lg border border-stone-300 text-xs bg-white" />
@@ -527,7 +838,7 @@
         </div>
 
         <div id="chk-mesa-fields" class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 hidden">
-          <label class="block font-bold text-xs text-[#0b2545]">Número da Mesa no Salão:</label>
+          <label class="block font-bold text-xs text-[#092E5B]">Número da Mesa no Salão:</label>
           <select id="chk-table-number" class="w-full p-2 rounded-lg border border-stone-300 text-xs font-bold bg-white">
             <option value="1">Mesa 01</option>
             <option value="2">Mesa 02</option>
@@ -539,9 +850,9 @@
         </div>
 
         <div class="space-y-2">
-          <label class="block font-black text-xs text-[#0b2545] uppercase">2. Forma de Pagamento:</label>
+          <label class="block font-black text-xs text-[#092E5B] uppercase">2. Forma de Pagamento:</label>
           <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="setPaymentMethod('pix')" id="pay-btn-pix" class="p-2.5 rounded-xl border-2 border-[#ea580c] bg-orange-50 font-bold text-xs text-[#ea580c] text-center">
+            <button type="button" onclick="setPaymentMethod('pix')" id="pay-btn-pix" class="p-2.5 rounded-xl border-2 border-[#F47721] bg-orange-50 font-bold text-xs text-[#F47721] text-center">
               ⚡ PIX
             </button>
             <button type="button" onclick="setPaymentMethod('cartao')" id="pay-btn-cartao" class="p-2.5 rounded-xl border-2 border-stone-200 bg-white font-bold text-xs text-stone-700 text-center">
@@ -566,7 +877,7 @@
       </div>
 
       <div class="p-4 bg-stone-50 border-t border-stone-200 shrink-0">
-        <button onclick="submitOrder()" class="w-full py-3.5 rounded-2xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95">
+        <button onclick="submitOrder()" class="w-full py-3.5 rounded-2xl bg-[#F47721] hover:bg-[#D65E13] text-white font-black text-sm shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95">
           <span>Enviar Pedido via WhatsApp & Salvar</span>
           <i data-lucide="check" class="w-4 h-4"></i>
         </button>
@@ -576,11 +887,11 @@
   </div>
 
   <!-- RASTREADOR MODAL -->
-  <div id="modal-tracker" class="fixed inset-0 z-50 bg-[#0b2545]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+  <div id="modal-tracker" class="fixed inset-0 z-50 bg-[#092E5B]/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
     <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] flex flex-col overflow-hidden border border-stone-200">
-      <div class="p-4 sm:p-5 bg-[#0b2545] text-white flex items-center justify-between shrink-0">
+      <div class="p-4 sm:p-5 bg-[#092E5B] text-white flex items-center justify-between shrink-0">
         <div class="flex items-center gap-2">
-          <i data-lucide="search" class="w-5 h-5 text-[#ea580c]"></i>
+          <i data-lucide="search" class="w-5 h-5 text-[#F47721]"></i>
           <h3 class="font-black text-lg font-serif">Rastreamento de Pedido</h3>
         </div>
         <button onclick="closeTrackerModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center">✕</button>
@@ -588,10 +899,10 @@
 
       <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1">
         <div class="space-y-2">
-          <label class="block font-black text-xs text-[#0b2545] uppercase">Digite seu WhatsApp para Localizar seu Pedido:</label>
+          <label class="block font-black text-xs text-[#092E5B] uppercase">Digite seu WhatsApp para Localizar seu Pedido:</label>
           <div class="flex gap-2">
             <input type="tel" id="tracker-phone-input" placeholder="(81) 99999-9999" class="flex-1 p-2.5 rounded-xl border border-stone-300 font-bold text-xs focus:outline-hidden" />
-            <button onclick="trackOrderByPhone()" class="px-4 py-2.5 rounded-xl bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-xs transition-colors">
+            <button onclick="trackOrderByPhone()" class="px-4 py-2.5 rounded-xl bg-[#F47721] hover:bg-[#D65E13] text-white font-black text-xs transition-colors">
               Buscar
             </button>
           </div>
@@ -603,11 +914,11 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-[#0b2545] text-stone-300 py-10 border-t border-blue-900/60 mt-12">
+  <footer class="bg-[#092E5B] text-stone-300 py-10 border-t border-blue-900/60 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6 text-center sm:text-left">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
         <div class="space-y-2">
-          <h4 class="text-xl font-black font-serif text-white">CHAPLIN <span class="text-[#ea580c]">NETO</span></h4>
+          <h4 class="text-xl font-black font-serif text-white">CHAPLIN <span class="text-[#F47721]">NETO</span></h4>
           <p class="text-xs text-stone-400">Pizzaria & Forno a Lenha de Pedra • Tradição e Sabor</p>
         </div>
 
@@ -642,7 +953,7 @@
         priceFamilia: 38.00,
         description: 'Mussarela especial, fatias de calabresa, presunto, bacon crocante, ovos, tomate, pimentão, milho verde, ervilha e orégano.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-nordestina',
@@ -653,7 +964,7 @@
         priceFamilia: 40.00,
         description: 'Mussarela derretida, carne de charque desfiada na manteiga de garrafa, azeitonas pretas, cebola roxa e orégano.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-camarao',
@@ -664,7 +975,7 @@
         priceFamilia: 48.00,
         description: 'Camarões selecionados salteados no azeite de oliva, molho de tomate rústico, mussarela e catupiry.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-calabresa',
@@ -675,7 +986,7 @@
         priceFamilia: 32.00,
         description: 'Mussarela especial, fatias de calabresa defumada artesanal, rodelas de cebola fresca e azeitonas pretas.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-frango-catupiry',
@@ -686,7 +997,7 @@
         priceFamilia: 35.00,
         description: 'Peito de frango desfiado temperado com ervas finas, milho verde e cobertura farta de Catupiry.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-quatro-queijos',
@@ -697,7 +1008,7 @@
         priceFamilia: 38.00,
         description: 'Harmonia entre mussarela, provolone curado, parmesão ralado e catupiry.',
         isPopular: false,
-        image: 'https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'pizza-chocolate-morango',
@@ -708,7 +1019,7 @@
         priceFamilia: 34.00,
         description: 'Creme de chocolate ao leite nobre com morangos frescos fatiados e granulado artesanal.',
         isPopular: true,
-        image: 'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'refri-coca-2l',
@@ -717,7 +1028,7 @@
         priceSingle: 14.00,
         description: 'Refrigerante garrafa 2L super gelada.',
         isPopular: false,
-        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=88'
       },
       {
         id: 'refri-guarana-2l',
@@ -726,7 +1037,7 @@
         priceSingle: 13.00,
         description: 'Refrigerante garrafa 2L gelada.',
         isPopular: false,
-        image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80'
+        image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=88'
       }
     ];
 
@@ -757,12 +1068,12 @@
         
         if (t === tabId) {
           if (viewEl) viewEl.classList.remove('hidden');
-          if (btnEl) { btnEl.classList.add('bg-[#ea580c]', 'text-white'); btnEl.classList.remove('text-blue-100'); }
-          if (mBtnEl) { mBtnEl.classList.add('bg-[#ea580c]', 'text-white'); mBtnEl.classList.remove('text-blue-100'); }
+          if (btnEl) { btnEl.classList.add('bg-[#F47721]', 'text-white'); btnEl.classList.remove('text-blue-100'); }
+          if (mBtnEl) { mBtnEl.classList.add('bg-[#F47721]', 'text-white'); mBtnEl.classList.remove('text-blue-100'); }
         } else {
           if (viewEl) viewEl.classList.add('hidden');
-          if (btnEl) { btnEl.classList.remove('bg-[#ea580c]', 'text-white'); btnEl.classList.add('text-blue-100'); }
-          if (mBtnEl) { mBtnEl.classList.remove('bg-[#ea580c]', 'text-white'); mBtnEl.classList.add('text-blue-100'); }
+          if (btnEl) { btnEl.classList.remove('bg-[#F47721]', 'text-white'); btnEl.classList.add('text-blue-100'); }
+          if (mBtnEl) { mBtnEl.classList.remove('bg-[#F47721]', 'text-white'); mBtnEl.classList.add('text-blue-100'); }
         }
       });
 
@@ -800,22 +1111,22 @@
           <div class="bg-white rounded-3xl overflow-hidden shadow-xs border border-stone-200 hover:shadow-lg transition-all flex flex-col group">
             <div class="relative h-48 overflow-hidden bg-stone-100">
               <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              ${p.isPopular ? '<span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#ea580c] text-white text-[10px] font-black uppercase tracking-wider shadow-md">🔥 Mais Pedida</span>' : ''}
+              ${p.isPopular ? '<span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#F47721] text-white text-[10px] font-black uppercase tracking-wider shadow-md">🔥 Mais Pedida</span>' : ''}
             </div>
 
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
-                <h4 class="font-black text-base font-serif text-[#0b2545]">${p.name}</h4>
+                <h4 class="font-black text-base font-serif text-[#092E5B]">${p.name}</h4>
                 <p class="text-xs text-stone-500 line-clamp-2 mt-1 leading-relaxed">${p.description}</p>
               </div>
 
               <div class="flex items-center justify-between pt-3 border-t border-stone-100">
                 <div>
                   <span class="text-[10px] text-stone-400 font-semibold uppercase">Preço</span>
-                  <div class="text-base font-black text-[#ea580c]">${displayPrice}</div>
+                  <div class="text-base font-black text-[#F47721]">${displayPrice}</div>
                 </div>
 
-                <button onclick="handleProductClick('${p.id}')" class="px-4 py-2.5 rounded-2xl bg-[#0b2545] hover:bg-[#ea580c] text-white font-bold text-xs transition-colors flex items-center gap-1.5 shadow-sm active:scale-95">
+                <button onclick="handleProductClick('${p.id}')" class="px-4 py-2.5 rounded-2xl bg-[#092E5B] hover:bg-[#F47721] text-white font-bold text-xs transition-colors flex items-center gap-1.5 shadow-sm active:scale-95">
                   <span>${isDrink ? '+ Adicionar' : 'Personalizar'}</span>
                 </button>
               </div>
@@ -830,13 +1141,13 @@
     function filterCategory(cat) {
       currentCategory = cat;
       document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('bg-[#0b2545]', 'text-white');
+        btn.classList.remove('bg-[#092E5B]', 'text-white');
         btn.classList.add('bg-stone-100', 'text-stone-700');
       });
       const activeBtn = document.getElementById('cat-' + cat);
       if (activeBtn) {
         activeBtn.classList.remove('bg-stone-100', 'text-stone-700');
-        activeBtn.classList.add('bg-[#0b2545]', 'text-white');
+        activeBtn.classList.add('bg-[#092E5B]', 'text-white');
       }
       renderProducts();
     }
@@ -893,10 +1204,10 @@
       ['M', 'G', 'Familia'].forEach(s => {
         const btn = document.getElementById('size-btn-' + s);
         if (s === size) {
-          btn.classList.add('border-[#0b2545]', 'bg-blue-50');
+          btn.classList.add('border-[#092E5B]', 'bg-blue-50');
           btn.classList.remove('border-stone-200', 'bg-white');
         } else {
-          btn.classList.remove('border-[#0b2545]', 'bg-blue-50');
+          btn.classList.remove('border-[#092E5B]', 'bg-blue-50');
           btn.classList.add('border-stone-200', 'bg-white');
         }
       });
@@ -918,10 +1229,10 @@
       ['none', 'catupiry', 'cheddar', 'chocolate'].forEach(c => {
         const btn = document.getElementById('crust-btn-' + c);
         if (c === id) {
-          btn.classList.add('border-[#0b2545]', 'bg-blue-50');
+          btn.classList.add('border-[#092E5B]', 'bg-blue-50');
           btn.classList.remove('border-stone-200', 'bg-white');
         } else {
-          btn.classList.remove('border-[#0b2545]', 'bg-blue-50');
+          btn.classList.remove('border-[#092E5B]', 'bg-blue-50');
           btn.classList.add('border-stone-200', 'bg-white');
         }
       });
@@ -982,7 +1293,7 @@
       closeCustomizer();
       updateCartBadge();
       openCart();
-      confetti({ particleCount: 25, spread: 40, origin: { y: 0.8 }, colors: ['#ea580c', '#0b2545'] });
+      confetti({ particleCount: 25, spread: 40, origin: { y: 0.8 }, colors: ['#F47721', '#092E5B'] });
     }
 
     function openCart() {
@@ -1030,9 +1341,9 @@
         return `
           <div class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 flex items-center justify-between gap-3">
             <div class="flex-1">
-              <h5 class="font-bold text-xs text-[#0b2545]">${it.quantity}x ${title}</h5>
+              <h5 class="font-bold text-xs text-[#092E5B]">${it.quantity}x ${title}</h5>
               ${subtitle ? `<p class="text-[10px] text-stone-500">${subtitle}</p>` : ''}
-              <div class="font-black text-xs text-[#ea580c] mt-1">R$ ${it.totalPrice.toFixed(2)}</div>
+              <div class="font-black text-xs text-[#F47721] mt-1">R$ ${it.totalPrice.toFixed(2)}</div>
             </div>
 
             <div class="flex items-center gap-1.5">
@@ -1097,10 +1408,10 @@
       ['delivery', 'balcao', 'mesa'].forEach(t => {
         const btn = document.getElementById('type-btn-' + t);
         if (t === type) {
-          btn.classList.add('border-[#ea580c]', 'bg-orange-50', 'text-[#ea580c]');
+          btn.classList.add('border-[#F47721]', 'bg-orange-50', 'text-[#F47721]');
           btn.classList.remove('border-stone-200', 'bg-white', 'text-stone-700');
         } else {
-          btn.classList.remove('border-[#ea580c]', 'bg-orange-50', 'text-[#ea580c]');
+          btn.classList.remove('border-[#F47721]', 'bg-orange-50', 'text-[#F47721]');
           btn.classList.add('border-stone-200', 'bg-white', 'text-stone-700');
         }
       });
@@ -1124,10 +1435,10 @@
       ['pix', 'cartao', 'dinheiro'].forEach(m => {
         const btn = document.getElementById('pay-btn-' + m);
         if (m === method) {
-          btn.classList.add('border-[#ea580c]', 'bg-orange-50', 'text-[#ea580c]');
+          btn.classList.add('border-[#F47721]', 'bg-orange-50', 'text-[#F47721]');
           btn.classList.remove('border-stone-200', 'bg-white', 'text-stone-700');
         } else {
-          btn.classList.remove('border-[#ea580c]', 'bg-orange-50', 'text-[#ea580c]');
+          btn.classList.remove('border-[#F47721]', 'bg-orange-50', 'text-[#F47721]');
           btn.classList.add('border-stone-200', 'bg-white', 'text-stone-700');
         }
       });
@@ -1206,7 +1517,7 @@
       updateCartBadge();
       closeCheckoutModal();
 
-      confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 }, colors: ['#ea580c', '#0b2545'] });
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 }, colors: ['#F47721', '#092E5B'] });
 
       window.open(waUrl, '_blank');
       openTrackerModal();
@@ -1255,21 +1566,21 @@
       const currIdx = statuses.indexOf(latest.status) >= 0 ? statuses.indexOf(latest.status) : 0;
 
       resultBox.innerHTML = `
-        <div class="p-4 rounded-2xl bg-[#0b2545] text-white space-y-3">
+        <div class="p-4 rounded-2xl bg-[#092E5B] text-white space-y-3">
           <div class="flex items-center justify-between">
             <div>
               <span class="text-[10px] text-blue-200 uppercase font-bold">Pedido #${latest.orderNumber}</span>
               <h4 class="font-black text-sm font-serif">${latest.customerName}</h4>
             </div>
-            <span class="px-2.5 py-1 rounded-full bg-[#ea580c] font-black text-[10px] uppercase">
+            <span class="px-2.5 py-1 rounded-full bg-[#F47721] font-black text-[10px] uppercase">
               ${statusLabels[latest.status] || latest.status}
             </span>
           </div>
 
           <div class="grid grid-cols-4 gap-1 text-center text-[9px] font-bold pt-2">
-            <div class="p-1 rounded ${currIdx >= 0 ? 'bg-[#ea580c] text-white' : 'bg-white/10 text-stone-400'}">1. Recebido</div>
-            <div class="p-1 rounded ${currIdx >= 1 ? 'bg-[#ea580c] text-white' : 'bg-white/10 text-stone-400'}">2. Preparo</div>
-            <div class="p-1 rounded ${currIdx >= 2 ? 'bg-[#ea580c] text-white' : 'bg-white/10 text-stone-400'}">3. Forno</div>
+            <div class="p-1 rounded ${currIdx >= 0 ? 'bg-[#F47721] text-white' : 'bg-white/10 text-stone-400'}">1. Recebido</div>
+            <div class="p-1 rounded ${currIdx >= 1 ? 'bg-[#F47721] text-white' : 'bg-white/10 text-stone-400'}">2. Preparo</div>
+            <div class="p-1 rounded ${currIdx >= 2 ? 'bg-[#F47721] text-white' : 'bg-white/10 text-stone-400'}">3. Forno</div>
             <div class="p-1 rounded ${currIdx >= 3 ? 'bg-emerald-500 text-white' : 'bg-white/10 text-stone-400'}">4. Entrega</div>
           </div>
 
@@ -1297,9 +1608,9 @@
             <span class="text-xs font-black text-amber-300">3 de 5 Selos</span>
           </div>
           <div class="flex gap-1.5">
-            <span class="w-7 h-7 rounded-full bg-[#ea580c] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
-            <span class="w-7 h-7 rounded-full bg-[#ea580c] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
-            <span class="w-7 h-7 rounded-full bg-[#ea580c] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
+            <span class="w-7 h-7 rounded-full bg-[#F47721] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
+            <span class="w-7 h-7 rounded-full bg-[#F47721] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
+            <span class="w-7 h-7 rounded-full bg-[#F47721] text-white flex items-center justify-center font-bold text-xs shadow">🍕</span>
             <span class="w-7 h-7 rounded-full bg-white/30 text-white/60 flex items-center justify-center font-bold text-xs">4</span>
             <span class="w-7 h-7 rounded-full bg-white/30 text-white/60 flex items-center justify-center font-bold text-xs">🎁</span>
           </div>
@@ -1326,15 +1637,15 @@
       container.innerHTML = orders.map(o => `
         <div class="p-4 rounded-2xl bg-white border border-stone-200 shadow-xs space-y-3">
           <div class="flex items-center justify-between">
-            <span class="font-black text-xs text-[#0b2545]">#${o.orderNumber} - ${o.customerName}</span>
-            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-100 text-[#ea580c]">${o.status}</span>
+            <span class="font-black text-xs text-[#092E5B]">#${o.orderNumber} - ${o.customerName}</span>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-100 text-[#F47721]">${o.status}</span>
           </div>
           <div class="text-xs text-stone-600 font-medium space-y-1">
             ${(o.items || []).map(it => `<div>• ${it.quantity}x ${it.product.name} (${it.size || 'G'})</div>`).join('')}
           </div>
           <div class="flex gap-1.5 pt-2 border-t border-stone-100">
-            <button onclick="advanceOrderStatus('${o.id}', 'forno')" class="flex-1 py-1.5 rounded-lg bg-[#0b2545] text-white text-[10px] font-bold">🔥 No Forno</button>
-            <button onclick="advanceOrderStatus('${o.id}', 'saiu_entrega')" class="flex-1 py-1.5 rounded-lg bg-[#ea580c] text-white text-[10px] font-bold">🛵 Despachar</button>
+            <button onclick="advanceOrderStatus('${o.id}', 'forno')" class="flex-1 py-1.5 rounded-lg bg-[#092E5B] text-white text-[10px] font-bold">🔥 No Forno</button>
+            <button onclick="advanceOrderStatus('${o.id}', 'saiu_entrega')" class="flex-1 py-1.5 rounded-lg bg-[#F47721] text-white text-[10px] font-bold">🛵 Despachar</button>
           </div>
         </div>
       `).join('');
@@ -1355,7 +1666,7 @@
       container.innerHTML = `
         <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200 flex items-center justify-between">
           <div>
-            <h4 class="font-bold text-xs text-[#0b2545]">Neto Silva (Chaplin) • Honda CG 160</h4>
+            <h4 class="font-bold text-xs text-[#092E5B]">Neto Silva (Chaplin) • Honda CG 160</h4>
             <p class="text-[10px] text-stone-500">Status: Disponível para entregas • Taxa R$ 5,00</p>
           </div>
           <a href="https://wa.me/5581992092831" target="_blank" class="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-xs font-bold">Ligar</a>
